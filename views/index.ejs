@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body>
+    <h1>Hello World</h1>
+    <p>Welcome to my page <%= nama %>
+    </p>
+    <ul>
+        <li><a href="/about">about</a></li>
+        <li><a href="/contact">contact</a></li>
+        <li><a href="/">home</a></li>
+    </ul>
+    <br>
+    <p><b>Contact List:</b></p>
+    <ol>
+        <% if (cont.length === 0) { %>
+            <p><i><b>Data is empty</b></i></p>
+        <% }else { %>
+            <% cont.forEach(element=> { %>
+                <li> Name :
+                    <%= element.nama %>
+                    <br>
+                    Email :
+                    <%= element.email %>
+                </li>
+                <% }) %>
+        <% } %>
+        
+    </ol>
+
+</body>
+
+</html>
